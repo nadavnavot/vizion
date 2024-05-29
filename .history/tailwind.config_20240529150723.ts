@@ -1,6 +1,5 @@
 import type { Config } from "tailwindcss"
 
-
 const config = {
   darkMode: ["class"],
   content: [
@@ -24,8 +23,8 @@ const config = {
         'neon': '#60F5D9',
       },
       fontFamily: {
-        heading: ['Poppins', 'sans-serif'],
-        text: ['Nunito', 'sans-serif'],
+        heading: ['Poppis'],
+        text: ['Nunito'],
       },
       keyframes: {
         "accordion-down": {

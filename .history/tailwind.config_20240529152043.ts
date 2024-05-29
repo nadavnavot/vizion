@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+const googleFonts = require('tailwindcss-google-fonts');
 
 
 const config = {
@@ -43,7 +44,13 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"),googleFonts({
+    fonts: {
+      poppins: ['400', '700'],
+      nunito: ['400', '700'],
+    },
+  }),
+],
 } satisfies Config
 
 export default config
