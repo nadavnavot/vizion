@@ -1,8 +1,7 @@
 "use client";
-
-import { useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import { usePathname } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChartColumn,
@@ -11,64 +10,34 @@ import {
   faBuildingColumns,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function Navbar() {
-  const [selectedValue, setSelectedValue] = useState("overview");
+const Navbar = () => {
+  const currentPath = usePathname();
 
-  const handleSelect = (value: string) => {
-    setSelectedValue(value);
-  };
+  const navItems = [
+    { path: "/", label: "Overview", icon: faChartColumn },
+    { path: "/budget", label: "Budget", icon: faPiggyBank },
+    { path: "/goals", label: "Goals", icon: faBullseye },
+    { path: "/assets", label: "Assets", icon: faBuildingColumns },
+  ];
 
   return (
-    <div className="fixed bottom-10 left-0 w-full flex justify-center">
-      <div className="w-9/12 p-4 rounded-[50px] bg-navy-blue">
-        <ToggleGroup
-          type="single"
-          value={selectedValue}
-          onValueChange={handleSelect}
-        >
-          <Link href="/" onClick={() => setSelectedValue("overview")}>
-            <ToggleGroupItem value="overview" aria-label="overview">
-              <FontAwesomeIcon
-                icon={faChartColumn}
-                className={`h-4 w-8 ${
-                  selectedValue === "overview" ? "text-neon" : ""
-                }`}
-              />
-            </ToggleGroupItem>
+    <div className="fixed bottom-20 left-0 w-full flex justify-center">
+      <div className="w-9/12 p-4 rounded-full bg-navy-blue flex justify-around">
+        {navItems.map((item) => (
+          <Link key={item.path} href={item.path}>
+            <div
+              className={`cursor-pointer flex flex-col items-center ${
+                currentPath === item.path ? "text-neon" : "text-gray-400"
+              }`}
+            >
+              <FontAwesomeIcon icon={item.icon} className="h-6 w-6" />
+              {/* <span className="mt-2">{item.label}</span> */}
+            </div>
           </Link>
-          <Link href="/budget" onClick={() => setSelectedValue("budget")}>
-            <ToggleGroupItem value="budget" aria-label="budget">
-              <FontAwesomeIcon
-                icon={faPiggyBank}
-                className={`h-4 w-4 ${
-                  selectedValue === "budget" ? "text-neon" : ""
-                }`}
-              />
-            </ToggleGroupItem>
-          </Link>
-          <Link href="/goals" onClick={() => setSelectedValue("goals")}>
-            <ToggleGroupItem value="goals" aria-label="goals">
-              <FontAwesomeIcon
-                icon={faBullseye}
-                className={`h-4 w-4 ${
-                  selectedValue === "goals" ? "text-neon" : ""
-                }`}
-              />
-            </ToggleGroupItem>
-          </Link>
-          <Link href="/assets" onClick={() => setSelectedValue("assets")}>
-            <ToggleGroupItem value="assets" aria-label="assets">
-              <FontAwesomeIcon
-                icon={faBuildingColumns}
-                className={`h-4 w-4 ${
-                  selectedValue === "assets" ? "text-neon" : ""
-                }`}
-              />
-            </ToggleGroupItem>
-          </Link>
-        </ToggleGroup>
-        {selectedValue}
+        ))}
       </div>
     </div>
   );
-}
+};
+
+export default Navbar;
