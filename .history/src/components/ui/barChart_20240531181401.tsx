@@ -1,0 +1,46 @@
+"use client";
+
+import ReactECharts from "echarts-for-react";
+
+const BarChart = () => {
+  const colorPalette = ["#142559", "#737376"];
+
+  const data = [1920, 600];
+  const categories = ["Income", "Bonus"];
+  const total = data.reduce((sum, value) => sum + value, 0);
+
+  const option = {
+    tooltip: {
+      trigger: "item",
+      formatter: (params: any) => {
+        const percentage = ((params.value / total) * 100).toFixed(2);
+        return `${params.name}: ${params.value}€ (${percentage}%)`;
+      },
+    },
+    xAxis: {
+      type: "category",
+      data: categories,
+    },
+    yAxis: {
+      type: "value",
+    },
+    series: [
+      {
+        data: data,
+        type: "bar",
+        itemStyle: {
+          color: (params: any) => colorPalette[params.dataIndex],
+        },
+      },
+    ],
+  };
+
+  return (
+    <div className="bg-white shadow-md rounded pb-4">
+      <h1>Income</h1>
+      <ReactECharts option={option} />
+    </div>
+  );
+};
+
+export default BarChart;
