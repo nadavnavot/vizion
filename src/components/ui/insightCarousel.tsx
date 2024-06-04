@@ -12,7 +12,7 @@ import Subtitle from "./subtitle";
 const insightsData = [
   {
     insight:
-      "Your restaurants budget increased by 20% last month. Consider cooking at home more often to save.",
+      "Your restaurant's budget increased by 20% last month. Consider cooking at home more often to save.",
     category: "#Budget",
   },
   {
@@ -31,7 +31,7 @@ const insightsData = [
     category: "#Budget",
   },
   {
-    insight: "Direct Your Christmas Bonus To Goals: Save 30% More This Year.",
+    insight: "Direct your Christmas Bonus to Goals: Save 30% more this year.",
     category: "#Goals",
   },
 ];
@@ -49,23 +49,23 @@ const InsightsCarousel = () => (
         {insightsData.map((item, index) => {
           const isEven = index % 2 === 0;
           return (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-              <div className="p-1">
-                <Card
-                  className={
-                    isEven
-                      ? "bg-navy-blue text-white"
-                      : "bg-white text-navy-blue"
-                  }
-                >
-                  <CardContent className="flex flex-col items-center justify-center p-6">
-                    <span className="text-2xl font-semibold mb-2">
-                      {item.insight}
-                    </span>
+            <CarouselItem key={index}>
+              <Card
+                className={
+                  (isEven
+                    ? "bg-navy-blue text-white "
+                    : "bg-white text-navy-blue ") + "w-full h-64 shadow-md"
+                }
+              >
+                <CardContent className="flex flex-col justify-between p-6 h-full">
+                  <span className="text-xl font-medium text-center py-8">
+                    {item.insight}
+                  </span>
+                  <span className="flex">
                     <span className="text-sm text-neon">{item.category}</span>
-                  </CardContent>
-                </Card>
-              </div>
+                  </span>
+                </CardContent>
+              </Card>
             </CarouselItem>
           );
         })}
