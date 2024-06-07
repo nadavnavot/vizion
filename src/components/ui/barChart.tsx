@@ -1,5 +1,4 @@
 "use client";
-
 import ReactECharts from "echarts-for-react";
 import Subtitle from "./subtitle";
 
@@ -12,11 +11,18 @@ const BarChart = () => {
 
   const option = {
     tooltip: {
-      trigger: "item",
+      trigger: "axis",
       formatter: (params: any) => {
-        const percentage = ((params.value / total) * 100).toFixed(2);
-        return `${params.name}: ${params.value}€ (${percentage}%)`;
+        const value = params[0].value;
+        const percentage = ((value / total) * 100).toFixed(2);
+        return `${params[0].name}: ${value}€ (${percentage}%)`;
       },
+    },
+    grid: {
+      left: "15%",
+      right: "10%",
+      bottom: "25%",
+      top: "10%",
     },
     xAxis: {
       type: "category",
@@ -31,7 +37,21 @@ const BarChart = () => {
         type: "bar",
         itemStyle: {
           color: (params: any) => colorPalette[params.dataIndex],
-          barBorderRadius: 2,
+          barBorderRadius: 1,
+        },
+      },
+    ],
+    graphic: [
+      {
+        type: "text",
+        left: "center",
+        bottom: "20px",
+        style: {
+          text: `Total: ${total}€`,
+          textAlign: "center",
+          fill: "#000",
+          fontSize: 16,
+          fontWeight: "normal",
         },
       },
     ],
@@ -40,8 +60,8 @@ const BarChart = () => {
   return (
     <div>
       <Subtitle>Income</Subtitle>
-      <div className="bg-white shadow-md rounded ">
-        <ReactECharts option={option} />
+      <div className="bg-white shadow-md rounded">
+        <ReactECharts option={option} style={{ height: "300px" }} />
       </div>
     </div>
   );

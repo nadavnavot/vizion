@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const CategorizeText = () => {
   return (
-    <div>
+    <div className="mt-12">
       <div className="text-lg text-navy-blue text-center">
         Way to go! All your transactions for this month are categorized
         <div className="align-center flex justify-center">

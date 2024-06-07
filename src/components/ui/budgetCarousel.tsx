@@ -1,10 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faChartColumn,
-  faPiggyBank,
-  faBullseye,
-  faBuildingColumns,
+  faBasketShopping,
+  faReceipt,
+  faBus,
+  faFilm,
 } from "@fortawesome/free-solid-svg-icons";
 import { Card, CardContent } from "./card";
 import {
@@ -18,32 +18,33 @@ import Subtitle from "./subtitle";
 
 const budgetItems = [
   {
+    name: "Transportation",
+    spent: 101,
+    total: 120,
+    icon: faBus,
+    color: "bg-blue-400",
+  },
+  {
     name: "Groceries",
     spent: 226,
     total: 200,
-    icon: faChartColumn,
-    color: "bg-green-500",
+    icon: faBasketShopping,
+    color: "bg-green-400",
   },
   {
     name: "Bills",
     spent: 43,
     total: 100,
-    icon: faPiggyBank,
-    color: "bg-red-500",
+    icon: faReceipt,
+    color: "bg-purple-400",
   },
-  {
-    name: "Transportation",
-    spent: 101,
-    total: 120,
-    icon: faBullseye,
-    color: "bg-blue-500",
-  },
+
   {
     name: "Entertainment",
     spent: 20,
     total: 130,
-    icon: faBuildingColumns,
-    color: "bg-orange-500",
+    icon: faFilm,
+    color: "bg-orange-400",
   },
 ];
 
