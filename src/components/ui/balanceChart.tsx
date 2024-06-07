@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import ReactECharts from "echarts-for-react";
 import Subtitle from "./subtitle";
@@ -20,9 +19,22 @@ const BalanceChart = () => {
       formatter: "{b}: {c}€ ({d}%)",
     },
     legend: {
-      bottom: "0px",
-      left: "center",
+      show: false,
     },
+    graphic: [
+      {
+        type: "text",
+        left: "center",
+        top: "center",
+        style: {
+          text: `${balance}€ Left`,
+          textAlign: "center",
+          fill: "#000",
+          fontSize: 20,
+          fontWeight: "",
+        },
+      },
+    ],
     series: [
       {
         type: "pie",
@@ -30,12 +42,14 @@ const BalanceChart = () => {
         itemStyle: {
           color: (params: any) => colorPalette[params.dataIndex],
         },
-        top: "0px",
         radius: ["40%", "70%"],
         avoidLabelOverlap: false,
         label: {
-          show: false,
-          position: "center",
+          show: true,
+          position: "inside",
+          formatter: "{c}€",
+          fontSize: 16,
+          fontWeight: 20,
         },
         labelLine: {
           show: false,
@@ -49,7 +63,22 @@ const BalanceChart = () => {
       <Subtitle>Balance</Subtitle>
       <div className="bg-white shadow-md rounded pb-4">
         <ReactECharts option={option} />
-        <h1>{balance}€ Left</h1>
+        <div className="flex justify-center mt-2">
+          <div className="flex items-center mr-4">
+            <div
+              className="w-4 h-4 mr-2 rounded"
+              style={{ backgroundColor: colorPalette[0] }}
+            ></div>
+            <span>Income</span>
+          </div>
+          <div className="flex items-center">
+            <div
+              className="w-4 h-4 mr-2 rounded"
+              style={{ backgroundColor: colorPalette[1] }}
+            ></div>
+            <span>Expenses</span>
+          </div>
+        </div>
       </div>
     </div>
   );
