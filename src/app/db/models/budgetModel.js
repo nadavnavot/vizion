@@ -5,6 +5,7 @@ const budgetSchema = new Schema(
     active: {
       type: Boolean,
       required: false,
+      default: true,
     },
     categoryColor: {
       type: String,
@@ -25,19 +26,22 @@ const budgetSchema = new Schema(
     activeSince: {
       type: Date,
       required: false,
+      default: Date.now,
     },
     amountSpent: {
       type: Number,
       required: false,
+      default: 0,
     },
     amountTotal: {
       type: Number,
       required: false,
+      default: 0,
     },
   },
-  { timestamps: false }
+  { timestamps: true }
 );
 
 const BudgetModel = models.Budget || model("Budget", budgetSchema);
 
-module.exports = BudgetModel;
+export default BudgetModel;

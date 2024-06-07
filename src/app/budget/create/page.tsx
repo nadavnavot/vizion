@@ -1,9 +1,10 @@
 import React from "react";
-import BudgetCard from "./budgetCard";
+import ProgressBar from "./ProgressBar";
+
 function budgetadd() {
   return (
     <div>
-      <BudgetCard />
+      <ProgressBar />
     </div>
   );
 }
