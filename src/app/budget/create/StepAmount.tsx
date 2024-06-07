@@ -22,7 +22,7 @@ const StepAmount = ({
           onValueChange={onBudgetChange}
         />
       </div>
-      <div className="mt-4 text-2xl font-medium flex items-center justify-center mt-32 text-navy-blue">
+      <div className=" text-2xl font-medium flex items-center justify-center mt-32 text-navy-blue">
         Selected Amount: €{budget}
       </div>
     </div>
