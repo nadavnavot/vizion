@@ -11,7 +11,11 @@ const NetWorth = () => {
         <span className="text-white text-4xl">60,293€</span>
       </Title>
       <div className="flex items-center gap-2">
-        <FontAwesomeIcon icon={faArrowTrendUp} className="text-neon" />
+        <FontAwesomeIcon
+          icon={faArrowTrendUp}
+          className="text-neon"
+          width={18}
+        />
         <p className="text-white">2,859€ more than last month</p>
       </div>
     </div>

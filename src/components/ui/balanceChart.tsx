@@ -61,7 +61,8 @@ const BalanceChart = () => {
   return (
     <div>
       <Subtitle>Balance</Subtitle>
-      <div className="bg-white shadow-md rounded pb-4">
+      <div className="bg-white shadow-md rounded pb-8">
+        <div className="m-8 text-2xl pt-8 font-semibold">June 2024</div>
         <ReactECharts option={option} />
         <div className="flex justify-center mt-2">
           <div className="flex items-center mr-4">

@@ -43,13 +43,13 @@ const PieChart = () => {
       {
         type: "text",
         left: "center",
-        top: "37%",
+        top: "36%",
         style: {
           text: `Total\n${total}€`,
           textAlign: "center",
           fill: "#000",
-          fontSize: 16,
-          fontWeight: "bold",
+          fontSize: 20,
+          fontWeight: "normal",
         },
       },
     ],
@@ -59,6 +59,7 @@ const PieChart = () => {
     <div>
       <Subtitle>Expenses</Subtitle>
       <div className="bg-white shadow-md rounded pb-4">
+        <div className="m-8 text-2xl pt-8 font-semibold">June 2024</div>
         <ReactECharts option={option} style={{ height: "400px" }} />
       </div>
     </div>

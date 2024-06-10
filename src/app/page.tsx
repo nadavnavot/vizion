@@ -11,20 +11,22 @@ import BalanceChart from "@/components/ui/balanceChart";
 import CategorizeText from "@/components/ui/categorizeText";
 
 const Overview = () => (
-  <div>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-hidden">
-      <Title>Overview</Title>
+  <div className="bg-gray-100">
+    <div className="p-8 mb-36">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-hidden">
+        <Title>Overview</Title>
 
-      <NetWorth />
-      <InsightsCarousel />
-      <BalanceChart />
-      <BarChart />
-      <PieChart />
-      <BudgetCarousel />
-      <GoalsCarousel />
-      <CategorizeText />
+        <NetWorth />
+        <InsightsCarousel />
+        <BalanceChart />
+        <BarChart />
+        <PieChart />
+        <BudgetCarousel />
+        <GoalsCarousel />
+        <CategorizeText />
+      </div>
+      <Navbar />
     </div>
-    <Navbar />
   </div>
 );
 

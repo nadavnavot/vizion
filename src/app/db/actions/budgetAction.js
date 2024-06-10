@@ -16,21 +16,6 @@ export async function updateBudget(_id, updates) {
   }
 }
 
-export async function deactivateBudget(_id) {
-  try {
-    const { success, errMsg, data } = await updateBudget(_id, {
-      active: false,
-    });
-    if (success) {
-      return { success: true, data };
-    } else {
-      throw new Error(errMsg);
-    }
-  } catch (error) {
-    return { success: false, errMsg: error.message };
-  }
-}
-
 export async function getBudgets() {
   try {
     await connectDB();

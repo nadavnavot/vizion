@@ -38,41 +38,44 @@ const insightsData = [
 
 const InsightsCarousel = () => (
   <div>
+    {" "}
     <Subtitle>Insights</Subtitle>
-    <Carousel
-      opts={{
-        align: "start",
-      }}
-      className="w-full max-w-sm"
-    >
-      <CarouselContent>
-        {insightsData.map((item, index) => {
-          const isEven = index % 2 === 0;
-          return (
-            <CarouselItem key={index}>
-              <Card
-                className={
-                  (isEven
-                    ? "bg-navy-blue text-white "
-                    : "bg-white text-navy-blue ") + "w-full h-64 shadow-md"
-                }
-              >
-                <CardContent className="flex flex-col justify-between p-6 h-full">
-                  <span className="text-xl font-medium text-center py-8">
-                    {item.insight}
-                  </span>
-                  <span className="flex">
-                    <span className="text-sm text-neon">{item.category}</span>
-                  </span>
-                </CardContent>
-              </Card>
-            </CarouselItem>
-          );
-        })}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
+    <div className="flex flex-col justify-center items-center w-full">
+      <Carousel
+        opts={{
+          align: "start",
+        }}
+        className="w-full max-w-2xl "
+      >
+        <CarouselContent>
+          {insightsData.map((item, index) => {
+            const isEven = index % 2 === 0;
+            return (
+              <CarouselItem key={index}>
+                <Card
+                  className={
+                    (isEven
+                      ? "bg-navy-blue text-white "
+                      : "bg-white text-navy-blue ") + "w-full h-64 shadow-md"
+                  }
+                >
+                  <CardContent className="flex flex-col justify-between pt-5 h-full ">
+                    <span className="text-2xl font-medium text-center">
+                      {item.insight}
+                    </span>
+                    <span className="flex">
+                      <span className="text-sm text-neon">{item.category}</span>
+                    </span>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            );
+          })}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+    </div>
   </div>
 );
 

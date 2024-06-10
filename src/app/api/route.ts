@@ -33,21 +33,3 @@ export async function GET(req: NextRequest) {
   }
 }
 
-export async function PUT(req: NextRequest) {
-  const { _id, active } = await req.json();
-
-  if (!_id || typeof active !== "boolean") {
-    return NextResponse.json({ error: "Invalid data" }, { status: 400 });
-  }
-
-  try {
-    const { success, errMsg, data } = await updateBudget(_id, { active });
-    if (success) {
-      return NextResponse.json({ success: true, data }, { status: 200 });
-    } else {
-      return NextResponse.json({ error: errMsg }, { status: 500 });
-    }
-  } catch (error) {
-    return NextResponse.json({ error: "Failed to update budget" }, { status: 500 });
-  }
-}

@@ -52,7 +52,7 @@ const Goal = () => {
   };
 
   return (
-    <div className="">
+    <div className="p-8 mb-36">
       <Title>Goals</Title>
       <div className="flex flex-col">
         {goals.map((goal, index) => {

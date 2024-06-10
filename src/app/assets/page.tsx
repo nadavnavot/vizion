@@ -119,7 +119,7 @@ export default function Assets() {
   };
 
   return (
-    <div className="pb-24">
+    <div className="p-8 mb-36">
       <Title>Asset Management</Title>
       <AddEditIcons />
       {Object.entries(assetsData).map(([categoryKey, category]) => (

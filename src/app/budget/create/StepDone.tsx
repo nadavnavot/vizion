@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import styles from "./StepDone.module.css";
 
 interface StepDoneProps {
   category: string;
@@ -35,7 +37,7 @@ const StepDone: React.FC<StepDoneProps> = ({ category, budget, id }) => {
 
   return (
     <div>
-      <div className="text-2xl text-center mt-48">
+      <div className="text-2xl text-center mt-20">
         The{" "}
         <span className="text-navy-blue font-bold p-1 rounded">{category}</span>{" "}
         budget of
@@ -45,7 +47,20 @@ const StepDone: React.FC<StepDoneProps> = ({ category, budget, id }) => {
         has been added successfully.
       </div>
       <Link href="/budget">
-        <div className="flex items-center justify-center mt-32">
+        <div
+          className={`flex items-center justify-center ${styles.checkmarkContainer}`}
+        >
+          {" "}
+          {/* Apply styles */}
+          <Image
+            src="/checkmark.png"
+            width={120}
+            height={120}
+            alt="checkmark"
+            className={styles.checkmark}
+          />
+        </div>
+        <div className="flex items-center justify-center mt-10">
           <button
             className="mt-4 bg-navy-blue text-white py-4 px-12 rounded-md "
             onClick={handleFinish}

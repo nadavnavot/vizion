@@ -42,6 +42,7 @@ const StepCategory = ({
               >
                 <FontAwesomeIcon
                   icon={category.categoryIcon as unknown as IconDefinition}
+                  width={16}
                 />
               </div>
               <label

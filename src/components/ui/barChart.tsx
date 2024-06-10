@@ -61,6 +61,8 @@ const BarChart = () => {
     <div>
       <Subtitle>Income</Subtitle>
       <div className="bg-white shadow-md rounded">
+        <div className="m-8 text-2xl pt-8 font-semibold">June 2024</div>
+
         <ReactECharts option={option} style={{ height: "300px" }} />
       </div>
     </div>
