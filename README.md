@@ -47,3 +47,10 @@ Developed as my **final project**, this application covers the **entire product 
 ![Figma](https://img.shields.io/badge/Figma-000000?style=for-the-badge&logo=figma&logoColor=white)  
 ![FigJam](https://img.shields.io/badge/FigJam-FF7262?style=for-the-badge&logo=figjam&logoColor=white)
 
+![Main Image](public/smartmockups_lxj6zv56.png)
+![Goals Image](public/smartmockups_lxj7rnpc.png)
+![Asset management](public/smartmockups_lxj73xio.png)
+![Notification](public/smartmockups_lxkle23f.png)
+[Report PDF](public/Vizion-BrieforConcept.pdf)
+
+
