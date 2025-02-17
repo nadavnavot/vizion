@@ -51,6 +51,9 @@ Developed as my **final project**, this application covers the **entire product 
 ![Goals Image](public/smartmockups_lxj7rnpc.png)
 ![Asset management](public/smartmockups_lxj73xio.png)
 ![Notification](public/smartmockups_lxkle23f.png)
+[Overview demo](https://files.catbox.moe/6d98pa.MP4)
+[Budget demo](https://files.catbox.moe/jnt5ru.MP4)
+
 
 
 
