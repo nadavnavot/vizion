@@ -1,6 +1,6 @@
 # 📊 Vizion – Personal Finance Management App  
 
-**Vizion** is a full-stack personal finance management app designed to help users take control of their money by providing a **clear overview** of their financial situation. With Vizion, users can **track expenses, set financial goals, and make informed financial decisions**. The app consolidates financial data from multiple sources, delivers personalized insights, and offers a seamless user experience for **budgeting and planning**.  
+**Vizion** is a full-stack personal finance management app designed to help users take control of their money by providing a **clear overview** of their financial situation. With Vizion, users can **track expenses, set financial goals, and make informed financial decisions**. The app consolidates financial data from multiple sources, delivers personalized insights, and offers a seamless user experience for **budgeting and planning**.  [Full project report](public/vizion_report.pdf)
 
 ---
 
@@ -51,6 +51,6 @@ Developed as my **final project**, this application covers the **entire product 
 ![Goals Image](public/smartmockups_lxj7rnpc.png)
 ![Asset management](public/smartmockups_lxj73xio.png)
 ![Notification](public/smartmockups_lxkle23f.png)
-[Report PDF](public/Vizion-BrieforConcept.pdf)
+
 
 
