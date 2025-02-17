@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📊 Vizion – Personal Finance Management App  
 
-## Getting Started
+**Vizion** is a full-stack personal finance management app designed to help users take control of their money by providing a **clear overview** of their financial situation. With Vizion, users can **track expenses, set financial goals, and make informed financial decisions**. The app consolidates financial data from multiple sources, delivers personalized insights, and offers a seamless user experience for **budgeting and planning**.  
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Project Overview  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Developed as my **final project**, this application covers the **entire product development lifecycle**, including:  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+✅ **Research & UX Research**  
+✅ **Market & Business Strategy**  
+✅ **UI/UX Design & Prototyping**  
+✅ **Frontend & Backend Development**  
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+## ✨ Key Features  
 
-To learn more about Next.js, take a look at the following resources:
+🔹 **Financial Overview** – Track balances, transactions & net worth  
+🔹 **Expense Tracking** – Categorize expenses & monitor spending habits  
+🔹 **Goal Setting** – Set & track financial goals (vacation, car, home, etc.)  
+🔹 **Budgeting Tools** – Create personalized budgets & receive spending insights  
+🔹 **Analytics & Insights** – Interactive charts for better financial planning  
+🔹 **Notifications & Alerts** – Get reminders & personalized financial tips  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🛠️ Technologies Used  
 
-## Deploy on Vercel
+### **Frontend & Backend**  
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)  
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)  
+![ShadCN](https://img.shields.io/badge/ShadCN-000000?style=for-the-badge&logo=shadcn&logoColor=white)  
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)  
+### **Database**  
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)  
+### **Development & Deployment**  
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)  
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)  
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)  
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)  
+### **Additional Tools**  
+![ECharts](https://img.shields.io/badge/ECharts-AA344D?style=for-the-badge&logo=apacheecharts&logoColor=white)  
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)  
+### **Design Tools**  
+![Figma](https://img.shields.io/badge/Figma-000000?style=for-the-badge&logo=figma&logoColor=white)  
+![FigJam](https://img.shields.io/badge/FigJam-FF7262?style=for-the-badge&logo=figjam&logoColor=white)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
